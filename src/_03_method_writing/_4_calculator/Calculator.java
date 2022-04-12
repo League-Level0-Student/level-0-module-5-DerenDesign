@@ -14,14 +14,21 @@ public class Calculator {
 				JOptionPane.INFORMATION_MESSAGE, null, new String[] { "divide", "multiply", "subtract", "add" }, null);
 
 		// 3) Call the correct method depending on what option the user chooses
-		if (task == 1) {
-			
+		if (task == 3) {
+			int sum = add(number1, number2);
+			System.out.print(sum);
 		}
 		if (task == 2) {
-			
+			int sub = subtract(number1, number2);
+			System.out.print(sub);
 		}
-		if (task == 3) {
-			
+		if (task == 1) {
+			int mul = multiply(number1, number2);
+			System.out.print(mul);
+		}
+		if (task == 0) {
+			int div = divide(number1, number2);
+			System.out.print(div);
 		}
 		// 4) Call the result() method and put the answer in a pop-up
 	}
@@ -29,23 +36,29 @@ public class Calculator {
 	// 1) Make 4 static methods (add, subtract, multiply, divide)
 	//		They should each take 2 numbers as parameters
 	//		and return the answer.
-	 void add() {
-		 int a = 0;
-		 a = number1 + number2;
+	static int add(int number1, int number2) {
+		 int a = number1 + number2;
+		 return a;
 	 }
-	 void subtract() {
-		 
+	 static int subtract(int number1, int number2) {
+		 int s = number1 - number2;
+		 return s;
 	 }
-	 void multiply() {
-		 
+	 static int multiply(int number1, int number2) {
+		 int m = number1 * number2;
+		 return m;
 	 }
-	 void divide() {
-		 
+	 static int divide(int number1, int number2) {
+		 int d = number1 / number2;
+		 return d;
 	 }
+	 
 	
 	// 2) Make a static method called " result" that takes a number
 	//		as a parameter and returns the number in a string
 	//		EX: "Your answer is " + number;
-
+	
+		 
+	 
 	
 }
